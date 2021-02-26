@@ -1,0 +1,16 @@
+<div class="card text-center m-3" style="width: 18rem;" appMostrarmes [elementMostrar]="ocultar">
+  <div class="card-body">
+    <h5 class="card-title">{{dispositiu.nom | uppercase}}</h5>
+    <p class="card-text">Identificador: {{dispositiu.id}} - enxufat: {{dispositiu.funciona | enxufat}}</p>
+    <p #ocultar style="display: none;" class="card-text">Grup: {{dispositiu.tipo}}</p>
+    <p class="card-text" (mouseleave)="auxRatting=dispositiu.ratting">
+      <span class="star" *ngFor="let i of [1,2,3,4,5]"
+      (click)="puntuar(i)"
+      (mouseenter)="auxRatting = i"
+      >
+        {{ i <= auxRatting ? '⚡' : '·' }}
+      </span>
+     </p>
+    <a class="btn btn-info" [routerLink]="['/dispositiu',dispositiu.id]">Detalls</a>
+  </div>
+</div>

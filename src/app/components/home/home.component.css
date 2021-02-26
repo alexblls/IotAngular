@@ -1,0 +1,16 @@
+.masthead {
+    height: 100vh;
+    
+    background-image: url('/assets/img/bombiEnchu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .stroke {
+text-align:center;
+color: #fff;
+/* font-size: 40px; */
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+letter-spacing: 0;
+text-shadow: -3px -3px 3px #2ED7CD, 3px -3px 3px #2ED7CD, -3px 3px 3px #2ED7CD, 3px 3px 3px #2ED7CD;
+}

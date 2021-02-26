@@ -1,0 +1,94 @@
+<div class="container mt-2">
+    <form #formDispositiu="ngForm" novalidate>
+        <div class="mb-3">
+            <label for="identificador" class="form-label">Identificador: </label>
+            <input type="text" class="form-control" id="identificador" name="identificador" [(ngModel)]="dispositiu.id"
+                #inputId="ngModel" required min="0" [ngClass]="{
+            'is-valid': inputId.valid && inputId.touched,
+            'is-invalid': inputId.invalid && inputId.touched 
+        }">
+            <p *ngIf="inputId.invalid && inputId.touched" class="alert alert-danger">Id requerit</p>
+        </div>
+        <div class="mb-3">
+            <label for="nom" class="form-label">Nom: </label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)]="dispositiu.nom" required
+                #inputNom="ngModel" minlength="4" maxlength="15" [ngClass]="{
+            'is-valid': inputNom.valid && inputNom.touched,
+            'is-invalid': inputNom.invalid && inputNom.touched 
+        }">
+            <p *ngIf="inputNom.invalid && inputNom.touched" class="alert alert-danger">Ha de tindre entre 4 i 15
+                caracters</p>
+        </div>
+        <div class="mb-3">
+            <label for="consum" class="form-label">Consum: </label>
+            <input type="number" class="form-control" id="consum" name="consum" [(ngModel)]="dispositiu.consum">
+        </div>
+        <div class="mb-3">
+            <label for="tipo" class="form-label">Tipo: </label>
+            <input type="number" class="form-control" id="tipo" name="tipo" readonly [(ngModel)]="dispositiu.tipo"
+                #inputTipo="ngModel" required min="1" max="4" [ngClass]="{
+            'is-valid': inputTipo.valid && inputTipo.touched,
+            'is-invalid': inputTipo.invalid && inputTipo.touched 
+        }">
+            <p *ngIf="inputTipo.invalid && inputTipo.touched" class="alert alert-danger">Ha de ser un numero entre 1 i 4
+            </p>
+        </div>
+        <div *ngIf="dispositiu.tipo == 1 || dispositiu.tipo == 2" class="mb-3">
+            <label for="temperatura" class="form-label">Temperatura: </label>
+            <input type="number" class="form-control" id="temperatura" name="temperatura"
+                [(ngModel)]="dispositiu.temperatura" #inputTemperatura="ngModel" min=-50 max=50 [ngClass]="{
+            'is-valid': inputTemperatura.valid && inputTemperatura.touched,
+            'is-invalid': inputTemperatura.invalid && inputTemperatura.touched 
+        }">
+            <p *ngIf="inputTemperatura.invalid && inputTemperatura.touched" class="alert alert-danger">Ha de ser un
+                numero entre -50 i 50</p>
+        </div>
+        <div *ngIf="dispositiu.tipo == 2" class="mb-3">
+            <label for="modo" class="form-label">Modo: </label>
+            <input type="text" class="form-control" id="modo" name="modo" [(ngModel)]="dispositiu.modo"
+                #inputModo="ngModel" minlength="4" maxlength="15" [ngClass]="{
+            'is-valid': inputModo.valid && inputModo.touched,
+            'is-invalid': inputModo.invalid && inputModo.touched 
+        }">
+            <p *ngIf="inputModo.invalid && inputModo.touched" class="alert alert-danger">Ha de tindre entre 4 i 15
+                caracters</p>
+        </div>
+        <div *ngIf="dispositiu.tipo == 2" class="mb-3">
+            <label for="temps" class="form-label">Temps: </label>
+            <input type="number" class="form-control" id="temps" name="temps" 
+            [(ngModel)]="dispositiu.temps" Poner dentro del input
+                #inputTemps="ngModel" appMinTemps=0 [ngClass]="{
+            'is-valid': inputTemps.valid && inputTemps.touched,
+            'is-invalid': inputTemps.invalid && inputTemps.touched 
+                }">
+            
+
+            <p *ngIf="inputTemps.invalid && inputTemps.touched" class="alert alert-danger">Ha de ser un numero entre 0 i
+                360</p>
+        </div>
+        <div *ngIf="dispositiu.tipo == 3" class="mb-3">
+            <label for="zona" class="form-label">Zona: </label>
+            <input type="text" class="form-control" id="zona" name="zona" [(ngModel)]="dispositiu.zona"
+                #inputZona="ngModel" minlength="4" maxlength="15" [ngClass]="{
+            'is-valid': inputZona.valid && inputZona.touched,
+            'is-invalid': inputZona.invalid && inputZona.touched 
+        }">
+            <p *ngIf="inputZona.invalid && inputZona.touched" class="alert alert-danger">Ha de tindre entre 4 i 15
+                caracters</p>
+        </div>
+        <div *ngIf="dispositiu.tipo == 4" class="mb-3">
+            <label for="falta" class="form-label">Falta: </label>
+            <input type="text" class="form-control" id="falta" name="falta" [(ngModel)]="dispositiu.falta"
+                #inputFalta="ngModel" minlength="3" maxlength="10" [ngClass]="{
+            'is-valid': inputFalta.valid && inputFalta.touched,
+            'is-invalid': inputFalta.invalid && inputFalta.touched 
+        }">
+            <p *ngIf="inputFalta.invalid && inputFalta.touched" class="alert alert-danger">Ha de tindre entre 3 i 10
+                caracters</p>
+        </div>
+        <div class="d-flex justify-content-evenly">
+            <button type="submit" class="btn btn-primary" (click)="false">Submit</button>
+            <a [routerLink]="['/dispositius']" class="card-link btn btn-primary">Llista Dispositius</a>
+        </div>
+    </form>
+</div>

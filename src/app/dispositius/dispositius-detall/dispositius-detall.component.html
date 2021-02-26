@@ -1,0 +1,43 @@
+<div  class="d-flex justify-content-center">
+    <div class="card m-3 w-75" style="width: 18rem;">
+        <div class="card-body text-center">
+            <h5 class="card-title">{{dispositiu.nom | uppercase}}</h5>
+        </div>
+        <ul *ngIf="dispositiu.tipo == 1" class="list-group list-group-flush">
+            <li class="list-group-item">Id: {{dispositiu.id}}</li>
+            <li class="list-group-item">Grup: {{dispositiu.tipo}}</li>
+            <li class="list-group-item">Enxufat: {{dispositiu.funciona | enxufat}}</li>
+            <li class="list-group-item">Temperatura: {{dispositiu.temperatura}}</li>
+            <li class="list-group-item">Consum: {{dispositiu.consum}}</li>
+        </ul>
+        <ul *ngIf="dispositiu.tipo == 2" class="list-group list-group-flush">
+            <li class="list-group-item">Id: {{dispositiu.id}}</li>
+            <li class="list-group-item">Grup: {{dispositiu.tipo}}</li>
+            <li class="list-group-item">Enxufat: {{dispositiu.funciona | enxufat}}</li>
+            <li class="list-group-item">Temperatura: {{dispositiu.temperatura}}</li>
+            <li class="list-group-item">Consum: {{dispositiu.consum}}</li>
+            <li class="list-group-item">Temps: {{dispositiu.temps}}min</li>
+            <li class="list-group-item">Modo: {{dispositiu.modo}}</li>
+        </ul>
+        <ul *ngIf="dispositiu.tipo == 3" class="list-group list-group-flush">
+            <li class="list-group-item">Id: {{dispositiu.id}}</li>
+            <li class="list-group-item">Grup: {{dispositiu.tipo}}</li>
+            <li class="list-group-item">Enxufat: {{dispositiu.funciona | enxufat}}</li>
+            <li class="list-group-item">Consum: {{dispositiu.consum}}</li>
+            <li class="list-group-item">Zona: {{dispositiu.zona}}</li>
+            <li class="list-group-item">Moviment: {{dispositiu.moviment}}</li>
+        </ul>
+        <ul *ngIf="dispositiu.tipo == 4" class="list-group list-group-flush">
+            <li class="list-group-item">Id: {{dispositiu.id}}</li>
+            <li class="list-group-item">Grup: {{dispositiu.tipo}}</li>
+            <li class="list-group-item">Enxufat: {{dispositiu.funciona | enxufat}}</li>
+            <li class="list-group-item">Consum: {{dispositiu.consum}}</li>
+            <li class="list-group-item">Falta: {{dispositiu.falta}}</li>
+            <li class="list-group-item">Moviment: {{dispositiu.moviment}}</li>
+        </ul>
+        <div class="card-body d-flex justify-content-evenly">
+            <a [routerLink]="['/dispositius']" class="card-link btn btn-primary">Llista Dispositius</a>
+            <a [routerLink]="['/dispositiu','editar',dispositiu.id]" class="btn btn-dark">Editar</a>
+        </div>
+    </div>
+</div>

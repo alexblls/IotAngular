@@ -1,0 +1,13 @@
+<div [ngStyle]="{'background-color': 'rgba(255, 0, 0, 0.3)'}" class="pt-1 pb-5">
+    <div class="m-3 d-flex justify-content-center">
+        <input type="text" name="buscador" id="buscador" [(ngModel)]="criteri">
+        <br>
+        <a class="btn btn-info" [routerLink]="['nou']">Nova Placa</a>
+    </div>
+
+    <div class="container-fluid d-flex flex-wrap justify-content-evenly">
+        <app-dispositius-item [dispositiu]="dispositiu"
+            *ngFor="let dispositiu of dispositius | filtrarDispositius:criteri">
+        </app-dispositius-item>
+    </div>
+</div>

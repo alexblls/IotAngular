@@ -1,0 +1,222 @@
+{"dispositius": [
+        {
+            "id": 1,
+            "nom": "nevera",
+            "funciona": true,
+            "consum": [1,2,3,4,5,6],
+            "temperatura": 6,
+            "tipo": 1
+        },
+        {
+            "id": 2,
+            "nom": "congelador",
+            "funciona": true,
+            "consum": [150,160,155,124,266,321],
+            "temperatura": -18,
+            "tipo": 1
+        },
+        {
+            "id": 3,
+            "nom":"calentador",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "temperatura ": 32,
+            "tipo": 1
+        },
+        {   
+            "id": 4,
+            "nom":"ordenador",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "temperatura": 52,
+            "tipo": 1
+        },
+        {
+            "id": 5,
+            "nom":"calefaccio WC",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "temperatura": 20,
+            "tipo": 1
+        },
+        {
+            "id": 6,
+            "nom":"vitro",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "temperatura": 50,
+            "tipo": 1
+        },
+        {
+            "id": 7,
+            "nom":"llavadora",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "centrifugat",
+            "temps": 60,
+            "temperatura": 40,
+            "tipo": 2
+        },
+        {
+            "id": 8,
+            "nom":"secadora",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "sintetic",
+            "temps": 50,
+            "temperatura": 50,
+            "tipo": 2
+        },
+        {
+            "id": 9,
+            "nom":"rentaplats",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "rentar",
+            "temps": 360,
+            "temperatura": 60,
+            "tipo": 2
+        },
+        {
+            "id": 10,
+            "nom":"climatitzador",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "calent",
+            "temps": 0,
+            "temperatura": 20,
+            "tipo": 2
+        },
+        {
+            "id": 11,
+            "nom":"microones",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "descongelar",
+            "temps": 70,
+            "temperatura": 200,
+            "tipo": 2
+        },
+        {
+            "id": 12,
+            "nom":"forn",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "dalt",
+            "temps": 30,
+            "temperatura": 200,
+            "tipo": 2
+        },
+        {
+            "id": 13,
+            "nom":"caldera",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "habitacio 1",
+            "temps": 121,
+            "temperatura": 23,
+            "tipo": 2
+        },
+        {
+            "id": 14,
+            "nom":"robot de neteja",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "mapping",
+            "temps": 78,
+            "temperatura": 20,
+            "tipo": 2
+        },
+        {
+            "id": 15,
+            "nom":"plaques solars",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "modo": "calfar aigua",
+            "temps": 78,
+            "temperatura": 20,
+            "tipo": 2
+        },
+        {
+            "id": 16,
+            "nom":"persianes",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": true,
+            "zona": "habitacio",
+            "tipo": 3
+        },
+        {
+            "id": 17,
+            "nom":"stores",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": true,
+            "zona": "habitacio",
+            "tipo": 3
+        },
+        {
+            "id": 18,
+            "nom":"porta garaje",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": true,
+            "zona": "garaje 1",
+            "tipo": 3
+        },
+        {
+            "id": 19,
+            "nom":"llums",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": true,
+            "zona": "cuina",
+            "tipo": 3
+        },
+        {
+            "id": 20,
+            "nom":"aspersor",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": true,
+            "zona": "pati darrere",
+            "tipo": 3
+        },
+        {
+            "id": 21,
+            "nom":"camares de vigilancia",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": false,
+            "zona": "pati darrere",
+            "tipo": 3
+        },
+        {
+            "id": 22,
+            "nom":"ventilador",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": false,
+            "zona": "habitacio 1",
+            "tipo": 3
+        },
+        {
+            "id": 23,
+            "nom":"televisio",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": false,
+            "zona": "comedor",
+            "tipo": 3
+        },
+        {
+            "id": 24,
+            "nom":"impresora",
+            "funciona": true,
+            "consum": [155,170,155,134,266,121],
+            "moviment": false,
+            "falta": "paper",
+            "tipo": 4
+        }
+    ]
+}
